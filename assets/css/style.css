@@ -47,7 +47,7 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  font-family: 'Italianno', cursive;
+  font-family: museo;
   box-sizing: border-box;
 }
 
@@ -671,6 +671,7 @@ section,
   object-fit: cover;
   z-index: 9997;
   max-width: 600px;
+  margin-top: -40px;
 }
 
 .hero .container {
@@ -678,6 +679,8 @@ section,
   z-index: 3;
   max-width: 50%;
   margin-left: 45px;
+  /* background-color: black; */
+  /* width: 800px; */
 }
 
 .hero h3 {
@@ -699,7 +702,8 @@ section,
 .hero h5 {
   font-size: 20px;
   font-weight: 600;
-  color: #004998;
+  /* color: #004998; */
+  color: #007bff;
   margin-bottom: 22px;
 }
 
@@ -785,7 +789,7 @@ section,
     max-height: 140vh;
     padding-top: 10px;
     padding: 20px 15px;
-    text-align: center;
+    /* text-align: center; */
   }
   .hero h2 {
     font-size: 32px;
@@ -812,6 +816,7 @@ section,
   .hero .container {
     max-width: 70%;
     padding: 0;
+    margin-left: 0;
   }
 
   #hero .social-links {
@@ -819,7 +824,7 @@ section,
   }
 
   #hero .social-links a {
-    font-size: 20px;
+    font-size: 18px;
     margin: 0 10px; /* Add space between social icons */
   }
 
@@ -856,7 +861,7 @@ section,
   }
 
   #hero p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   #hero .top-btn {
@@ -864,9 +869,24 @@ section,
     padding: 8px 16px;
   }
 
+  #hero .social-links {
+    margin-top: 20px;
+  }
+
+  #hero .social-links a {
+    font-size: 18px;
+    margin: 0 6px; /* Add space between social icons */
+  }
+
+  .hero .container {
+    width: 750px;
+    /* background-color: #000000; */
+    padding: 0;
+  }
+
   #hero img {
     max-width: 100%;
-    margin-top: 10px;
+    margin-top: -60px;
   }
 }
 
@@ -921,7 +941,7 @@ section,
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
-  color: #004998;
+  color: #1e7fe7;
 }
 
 .about .content ul {
