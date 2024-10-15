@@ -816,7 +816,7 @@ section,
   .hero .container {
     max-width: 70%;
     padding: 0;
-    margin-left: 0;
+    margin-left: 24px;
   }
 
   #hero .social-links {
@@ -880,7 +880,7 @@ section,
 
   .hero .container {
     width: 750px;
-    /* background-color: #000000; */
+    margin-left: 23px;
     padding: 0;
   }
 
