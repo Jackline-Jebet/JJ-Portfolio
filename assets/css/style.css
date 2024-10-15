@@ -159,6 +159,8 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   z-index: 997;
   scrollbar-width: none;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 255, 0.5);
 }
 
 .header::before {
@@ -168,8 +170,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 255, 0.2);
+  /* background-color: rgba(0, 0, 255, 0.2); */
+  /* z-index: -1; */
+  background-color: rgba(11, 11, 252, 0.3);
   z-index: -1;
+  /* backdrop-filter: blur(10px); */
+  /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease-in-out;
 }
 
 .header img {
@@ -640,6 +647,8 @@ section,
   justify-content: center;
   background-image: url('https://mrwallpaper.com/images/high/neon-grey-swirls-ipad-air-4-uf29hp7cle8eext7.webp');
   background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 255, 0.5);
 }
 
 .hero::before {
@@ -775,6 +784,8 @@ section,
   .hero {
     max-height: 140vh;
     padding-top: 10px;
+    padding: 20px 15px;
+    text-align: center;
   }
   .hero h2 {
     font-size: 32px;
@@ -782,14 +793,16 @@ section,
 
   .hero p {
     font-size: 17px;
+    line-height: 1.5;
+    margin-top: 15px;
   }
 
   .hero h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .hero h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .hero h5 {
@@ -798,9 +811,63 @@ section,
 
   .hero .container {
     max-width: 70%;
+    padding: 0;
   }
 
- 
+  #hero .social-links {
+    margin-top: 20px;
+  }
+
+  #hero .social-links a {
+    font-size: 20px;
+    margin: 0 10px; /* Add space between social icons */
+  }
+
+  #hero img {
+    max-width: 80%;
+    margin: 20px auto;
+    display: block; /* Ensure image is centered */
+  }
+
+  #hero .top-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 14px; /* Adjust button size */
+  }
+
+  /* Ensure proper spacing around elements */
+  .hero h1,
+  .hero h3,
+  .hero h5 {
+    margin: 10px 0;
+  }
+
+  /* Reduce size for smaller icons and margins */
+  .social-links i {
+    font-size: 18px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 24px;
+  }
+
+  #hero p {
+    font-size: 12px;
+  }
+
+  #hero .top-btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  #hero img {
+    max-width: 100%;
+    margin-top: 10px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -810,9 +877,10 @@ section,
   position: relative;
   padding: 60px 0;
   color: #fff;
-  background: linear-gradient(135deg, #000000, #1a1a68);
+  /* background: linear-gradient(135deg, #000000, #1a1a68); */
   background-size: cover;
   background-position: center;
+  background-image: url('https://mrwallpaper.com/images/high/neon-grey-swirls-ipad-air-4-uf29hp7cle8eext7.webp');
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 255, 0.5);
 }
@@ -826,6 +894,20 @@ section,
   height: 100%;
   background-color: rgba(39, 39, 233, 0.3);
   z-index: -1;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 11, 252, 0.3);
+  z-index: -1;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .about h2 {
@@ -866,11 +948,11 @@ section,
 
 .about .goal p {
   display: flex;
-  margin-top: 150px;
-  margin-left: 80px;
+  /* margin-top: 150px; */
+  /* margin-left: 80px; */
   font-style: italic;
   font-family: cursive;
-  width: 160px;
+  /* width: 160px; */
   font-size: 14px;
 }
 
@@ -967,17 +1049,56 @@ section,
 @media (max-width: 768px) {
   .glass-container {
     flex-direction: column;
-    gap: 10px;
+    /* gap: 10px; */
+    display: block;
+
+  }
+
+  .about img {
+    max-width: 80%;
+    margin: 20px auto;
+    display: block;
   }
 
   .glass-effect-one, .glass-effect-two {
     padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .glass-effect-one ul, .glass-effect-two ul {
+    padding: 0;
+    margin: 0;
   }
 
   .glass-effect-one ul li, .glass-effect-two ul li {
     font-size: 0.9rem;
+    margin-bottom: 10px;
   }
 }
+
+  @media (max-width: 480px) {
+
+    #about h2 {
+      font-size: 24px;
+    }
+  
+    #about .goal p, #about .content p {
+      font-size: 12px;
+      line-height: 1.4;
+    }
+  
+    #about .content h2 {
+      font-size: 20px;
+    }
+  
+    #about .inner-content ul li {
+      font-size: 12px;
+    }
+  
+    .glass-effect-one, .glass-effect-two {
+      padding: 10px;
+    }
+  }
 
 /* General Section Setup */
 .about1 {
@@ -1009,7 +1130,7 @@ section,
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  margin-left: 80px;
+  /* margin-left: 80px; */
 }
 
 .about1-title h2 {
@@ -1062,8 +1183,12 @@ section,
 
 @media (max-width: 768px) {
   .about1-content {
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
+    /* justify-content: center; */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .about1-block {

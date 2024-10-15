@@ -28,14 +28,34 @@ links.forEach((link) => {
   /**
    * Header toggle
    */
-  const headerToggleBtn = document.querySelector('.header-toggle');
+const headerToggleBtn = document.querySelector('.header-toggle');
+const header = document.querySelector('#header');
 
-  function headerToggle() {
-    document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
+// Function to toggle the header menu
+function headerToggle() {
+  header.classList.toggle('header-show');
+  headerToggleBtn.classList.toggle('bi-list');
+  headerToggleBtn.classList.toggle('bi-x');
+}
+
+// Event listener for toggle button click
+headerToggleBtn.addEventListener('click', (e) => {
+  e.stopPropagation(); // Prevents immediate closure when clicking the toggle
+  headerToggle();
+});
+
+// Function to close the header if clicked outside
+function closeHeaderIfClickedOutside(event) {
+  // Check if the click is outside the header and the toggle button
+  if (!header.contains(event.target) && !headerToggleBtn.contains(event.target)) {
+    if (header.classList.contains('header-show')) {
+      headerToggle(); // Close the menu if it's open
+    }
   }
-  headerToggleBtn.addEventListener('click', headerToggle);
+}
+
+// Add event listener to detect clicks on the document
+document.addEventListener('click', closeHeaderIfClickedOutside);
 
   /**
    * Hide mobile nav on same-page/hash links
