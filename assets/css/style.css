@@ -1345,6 +1345,8 @@ strong {
   background-position: center;
   padding: 40px 0 40px 0;
   overflow: hidden;
+  background-blend-mode: multiply;
+  background-color: rgba(2, 2, 103, 0.5);
 }
 
 .resume::before {
@@ -1355,7 +1357,8 @@ strong {
   width: 100%;
   height: 100%;
   background-color: rgba(39, 39, 233, 0.3); 
-  z-index: 0;
+  z-index: -1;
+  /* z-index: 0; */
   background: rgba(16, 15, 15, 0.1); 
   backdrop-filter: blur(10px);
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
@@ -1371,6 +1374,7 @@ strong {
   color: #004998;
   font-size: 26px;
   font-weight: 700;
+  z-index: 9997;
 }
 
 .resume em {
@@ -1572,6 +1576,8 @@ strong {
   background-position: center;
   padding: 80px 0;
   overflow: hidden;
+  background-blend-mode: multiply;
+  background-color: rgba(2, 2, 103, 0.5);
 }
 
 .services::before {
@@ -1715,6 +1721,9 @@ strong {
   background-position: center;
   padding: 80px 0;
   overflow: hidden;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 255, 0.5);
+
 }
 
 .testimonials::before {
@@ -1884,6 +1893,8 @@ strong {
   background-image: url('https://mrwallpaper.com/images/high/neon-grey-swirls-ipad-air-4-uf29hp7cle8eext7.webp');
   background-size: cover;
   background-position: center;
+  background-blend-mode: multiply;
+  background-color: rgba(2, 2, 103, 0.5);
 }
 
 .contact::before {
