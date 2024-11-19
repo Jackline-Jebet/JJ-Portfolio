@@ -154,9 +154,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 300px;
   transition: all ease-in-out 0.3s;
   overflow-y: auto;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
+  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
   z-index: 997;
   scrollbar-width: none;
   background-blend-mode: multiply;
@@ -172,10 +172,11 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   /* background-color: rgba(0, 0, 255, 0.2); */
   /* z-index: -1; */
-  background-color: rgba(11, 11, 252, 0.3);
+  /* background-color: rgba(11, 11, 252, 0.3); */
+  /* background-color: rgba(0, 0, 255, 0.5); */
   z-index: -1;
-  /* backdrop-filter: blur(10px); */
-  /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -453,7 +454,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(39, 39, 233, 0.3);
+  /* background-color: rgba(39, 39, 233, 0.3); */
   z-index: 0;
   background: rgba(16, 15, 15, 0.1);
   backdrop-filter: blur(10px);
@@ -649,6 +650,7 @@ section,
   background-size: cover;
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 255, 0.5);
+  /* background: rgba(16, 15, 15, 0.1); */
 }
 
 .hero::before {
@@ -659,6 +661,9 @@ section,
   width: 100%;
   height: 100%;
   z-index: 1;
+  /* background: rgba(16, 15, 15, 0.1); */
+  /* backdrop-filter: blur(10px); */
+  /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); */
   background-color: rgba(0, 0, 255, 0.2);
 }
 
@@ -789,7 +794,6 @@ section,
     max-height: 140vh;
     padding-top: 10px;
     padding: 20px 15px;
-    /* text-align: center; */
   }
   .hero h2 {
     font-size: 32px;
@@ -825,20 +829,20 @@ section,
 
   #hero .social-links a {
     font-size: 18px;
-    margin: 0 10px; /* Add space between social icons */
+    margin: 0 10px; 
   }
 
   #hero img {
     max-width: 80%;
     margin: 20px auto;
-    display: block; /* Ensure image is centered */
+    display: block; 
   }
 
   #hero .top-btn {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 14px; /* Adjust button size */
+    font-size: 14px; 
   }
 
   /* Ensure proper spacing around elements */
@@ -875,7 +879,7 @@ section,
 
   #hero .social-links a {
     font-size: 18px;
-    margin: 0 6px; /* Add space between social icons */
+    margin: 0 6px; 
   }
 
   .hero .container {
@@ -897,12 +901,12 @@ section,
   position: relative;
   padding: 60px 0;
   color: #fff;
-  /* background: linear-gradient(135deg, #000000, #1a1a68); */
   background-size: cover;
   background-position: center;
   background-image: url('https://mrwallpaper.com/images/high/neon-grey-swirls-ipad-air-4-uf29hp7cle8eext7.webp');
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 255, 0.5);
+
 }
 
 .about::before {
@@ -913,6 +917,7 @@ section,
   width: 100%;
   height: 100%;
   background-color: rgba(39, 39, 233, 0.3);
+  
   z-index: -1;
 }
 
@@ -968,11 +973,8 @@ section,
 
 .about .goal p {
   display: flex;
-  /* margin-top: 150px; */
-  /* margin-left: 80px; */
   font-style: italic;
   font-family: cursive;
-  /* width: 160px; */
   font-size: 14px;
 }
 
