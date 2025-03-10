@@ -6,8 +6,8 @@
 
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #163259; /*Color for headings, subheadings and title throughout the website */
+  --default-color: #272929; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #023333; /*Color for headings, subheadings and title throughout the website */
   --accent-color: #f75023; /*Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -17,23 +17,24 @@
 :root {
   --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
   --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items */
-  --nav-dropdown-color: #a8a9b4; /* Used for dropdown navigation links */
+  --nav-mobile-background-color: #041414; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #041414; /* Used as the background color for dropdown items */
+  --nav-dropdown-color: #9eece8; /* Used for dropdown navigation links */
   --nav-dropdown-hover-color: #ffffff; /* Applied to dropdown navigation links when hovered */
 }
 
 /* Color Presets */
 .light-background {
   --background-color: #f4fafd;
+  /* color: #023327; */
   --surface-color: #ffffff;
   --nav-color: #f75023;
 }
 
 .dark-background {
-  --background-color: #040b14;
+  --background-color: #041214;
   --default-color: #ffffff;
-  --surface-color: #151f2b;
+  --surface-color: #15292b;
   --contrast-color: #ffffff;
 }
 
@@ -154,13 +155,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 300px;
   transition: all ease-in-out 0.3s;
   overflow-y: auto;
-  /* backdrop-filter: blur(10px); */
-  /* -webkit-backdrop-filter: blur(10px); */
-  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
   z-index: 997;
   scrollbar-width: none;
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 255, 0.5);
+  background-color: rgba(4, 238, 250, 0.5);
 }
 
 .header::before {
@@ -170,10 +168,6 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgba(0, 0, 255, 0.2); */
-  /* z-index: -1; */
-  /* background-color: rgba(11, 11, 252, 0.3); */
-  /* background-color: rgba(0, 0, 255, 0.5); */
   z-index: -1;
   backdrop-filter: blur(10px);
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
@@ -184,12 +178,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
-}
-
-.header .logo {
-  line-height: 1;
-  margin-bottom: 15px;
+  border: 8px solid color-mix(in srgb, var(--default-color), transparent 55%);
+  border: 10px solid #16939340;
 }
 
 .header .logo img {
@@ -199,9 +189,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .header .logo h1 {
   font-size: 24px;
-  margin: 0;
+  margin-bottom: 8px;
   font-weight: 700;
-  color: #f75023;
+  /* color: #f75023; */
+  color: #00ffff;
 }
 
 .header .social-links {
@@ -223,7 +214,9 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   background: color-mix(in srgb, var(--default-color), transparent 10%);
-  color: #163259;
+  /* color: #163259; */
+  /* color: #03fbe2; */
+  color: #f75023;
   margin: 10px 2px;
   border-radius: 50%;
   text-align: center;
@@ -289,7 +282,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.16);
   box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   filter: contrast(150%);
@@ -307,6 +300,7 @@ h1, h2, h3, h4, h5, h6 {
 .navmenu a,
 .navmenu a:focus {
   color: #f75023;
+  /* color: #03fbe2; */
   padding: 15px 10px;
   font-family: var(--nav-font);
   font-size: 16px;
@@ -319,11 +313,23 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
+.navmenu span{
+  color: #f75023;
+}
+
+.navmenu span:hover {
+  color: #ffffff;
+  /* background-color: #f75023; */
+}
+
 /* Icon styling for each menu item */
 .navmenu a .navicon,
 .navmenu a:focus .navicon {
   font-size: 20px;
   margin-right: 10px;
+  /* color: #f75023; */
+  /* color: #03fbe2; */
+  color: #71faf7;
 }
 
 /* Dropdown toggle icon */
@@ -337,7 +343,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: #163259;
+  background-color: #f75023;
   color: #fff;
   transition: 0.3s;
   flex-shrink: 0;
@@ -364,7 +370,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navmenu .active .toggle-dropdown,
 .navmenu .active:focus .toggle-dropdown {
-  background-color: #163259;
+  background-color: #015e5e;
   color: var(--contrast-color);
   transform: rotate(180deg);
 }
@@ -463,7 +469,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer strong {
-  color: #007bff;
+  color: #03fbe2;
 }
 
 .footer .credits {
@@ -646,14 +652,11 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('https://mrwallpaper.com/images/high/neon-grey-swirls-ipad-air-4-uf29hp7cle8eext7.webp');
-  background-size: cover;
-  background-blend-mode: multiply;
-  background-color: rgba(0, 0, 255, 0.5);
-  /* background: rgba(16, 15, 15, 0.1); */
+  background-color: rgb(0, 56, 59);
+  
 }
 
-.hero::before {
+/* .hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -664,28 +667,15 @@ section,
   /* background: rgba(16, 15, 15, 0.1); */
   /* backdrop-filter: blur(10px); */
   /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); */
-  background-color: rgba(0, 0, 255, 0.2);
-}
+  /* background-color: rgba(0, 0, 255, 0.2); */
+/* } */ 
 
-
-.hero img {
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  z-index: 9997;
-  max-width: 600px;
-  margin-top: -40px;
-}
 
 .hero .container {
   position: relative;
   z-index: 3;
   max-width: 50%;
-  margin-left: 45px;
-  /* background-color: black; */
-  /* width: 800px; */
+  margin-left: 60px;
 }
 
 .hero h3 {
@@ -707,8 +697,7 @@ section,
 .hero h5 {
   font-size: 20px;
   font-weight: 600;
-  /* color: #004998; */
-  color: #007bff;
+  color: aqua;
   margin-bottom: 22px;
 }
 
@@ -719,7 +708,7 @@ section,
 .hero p {
   margin: 5px 0 0 0;
   font-size: 1.1rem;
-  color: #555459;
+  /* color: #555459; */
   color: #ffffff;
   line-height: 1.8;
 }
@@ -766,14 +755,15 @@ section,
 }
 .container .social-links a:hover {
   color: #fff;
-  background-color: #163259;
+  background-color: #03fbe2;
 }
 
 .top-btn {
   padding: 9px 30px;
   border: 2px solid #f75023;
   border-radius: 30px;
-  color: #007bff;
+  /* color: #03fbe2; */
+  color: #00ffff;
   letter-spacing: 1px;
   font-size: 1.1rem;
   font-weight: 500;
@@ -899,29 +889,32 @@ section,
 --------------------------------------------------------------*/
 .about {
   position: relative;
+  padding: 60px 0px;
+  color: #fff;
+  background: linear-gradient(to bottom, rgb(0, 56, 59), rgb(0, 68, 71), rgba(255, 255, 255, 1));
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+
+.about section {
   padding: 60px 0;
   color: #fff;
   background-size: cover;
   background-position: center;
   background-image: url('https://mrwallpaper.com/images/high/neon-grey-swirls-ipad-air-4-uf29hp7cle8eext7.webp');
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 255, 0.5);
-
+  background-color: rgba(3, 63, 65, 0.949);
+  margin: -40px 50px 0px 50px;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-.about::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(39, 39, 233, 0.3);
-  
-  z-index: -1;
-}
 
-.about::before {
+/* .about::before {
   content: "";
   position: absolute;
   top: 0;
@@ -933,10 +926,15 @@ section,
   backdrop-filter: blur(10px);
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
-}
+} */
+
 
 .about h2 {
-  color: #004998;
+  color: #ffffff;
+}
+
+.about a {
+  color: #03fbf3;
 }
 
 .about .content {
@@ -947,6 +945,7 @@ section,
   font-weight: 700;
   font-size: 24px;
   color: #1e7fe7;
+  color: aqua;
 }
 
 .about .content ul {
@@ -967,7 +966,8 @@ section,
 .about .content ul i {
   font-size: 16px;
   margin-right: 5px;
-  color: var(--accent-color);
+  /* color: var(--accent-color); */
+  color: #ffffff;
   line-height: 0;
 }
 
@@ -986,7 +986,8 @@ section,
 }
 
 .glass-effect-one {
-  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(255, 255, 255, 0.1); */
+  background-color: rgba(4, 238, 250, 0.5);
   border-radius: 16px;
   padding: 20px;
   backdrop-filter: blur(10px);
@@ -1002,6 +1003,7 @@ section,
 
 .glass-effect-two {
   background: rgba(0, 0, 255, 0.1);
+  background-color: rgba(3, 126, 133, 0.5);
   border-radius: 16px;
   padding: 20px;
   backdrop-filter: blur(8px);
@@ -1056,7 +1058,7 @@ section,
 }
 
 .glass-effect-one ul li i, .glass-effect-two ul li i {
-  color: #00bfff;
+  color: #023327;
   margin-right: 5px;
 }
 
@@ -1126,12 +1128,25 @@ section,
 .about1 {
   position: relative;
   padding: 30px 0;
-  background-color: rgba(0, 0, 255, 0.5);
-  background: linear-gradient(135deg, #000000, #0a0a23);
+  /* background-color: rgba(0, 0, 255, 0.5); */
+  /* background-color: rgba(4, 238, 250, 0.5); */
+  /* background: linear-gradient(135deg, #000000, #0a0a23); */
+  /* background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgb(0, 56, 59), rgb(0, 68, 71)); */
   color: white;
   background-image: url('https://mrwallpaper.com/images/high/neon-grey-swirls-ipad-air-4-uf29hp7cle8eext7.webp');
-  background-size: cover;
-  background-blend-mode: multiply;
+  /* background-size: cover; */
+  /* background-blend-mode: multiply; */
+
+  position: relative;
+  padding: 60px 0px;
+  color: #fff;
+  /* background: linear-gradient(to bottom, rgb(227, 25, 25),  rgb(0, 68, 71), rgb(0, 56, 59)); */
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .about1::before {
@@ -1141,11 +1156,28 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(11, 11, 252, 0.3);
+  background-color: rgba(4, 238, 250, 0.5);
+  background: linear-gradient(to bottom, rgba(182, 57, 23, 0),  rgb(5, 106, 111), rgb(0, 56, 59));
   z-index: 0;
   backdrop-filter: blur(10px);
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); */
   transition: transform 0.3s ease-in-out;
+  /* border-radius: 50px; */
+}
+
+.about1 section {
+  padding: 70px 0;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-image: url('https://mrwallpaper.com/images/high/neon-grey-swirls-ipad-air-4-uf29hp7cle8eext7.webp');
+  background-blend-mode: multiply;
+  background-color: rgba(3, 63, 65, 0.949);
+  margin: 40px 60px 0px 60px;
+  /* border-radius: 50px; */
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .container1 {
@@ -1163,7 +1195,8 @@ section,
 }
 
 .about1-title h2 .highlight {
-  color: #007bff; 
+  /* color: #007bff;  */
+  color: #f75023;
   font-weight: bold;
 }
 
@@ -1187,7 +1220,8 @@ section,
 }
 
 .about1-block h2 {
-  color: #b73434;
+  color: #ffffff;
+  font-size: 2.5rem;
   margin-bottom: 15px;
   letter-spacing: 1.5px;
 }
@@ -1199,7 +1233,9 @@ section,
 }
 
 .about1-block p .highlight {
-  color: #007bff;
+  /* color: #007bff; */
+  color: #00ffff;
+  /* color: #f75023; */
   font-weight: bold;
 }
 
@@ -1228,10 +1264,11 @@ section,
 --------------------------------------------------------------*/
 .stats {
   position: relative;
-  background: #ffffff;
+  /* background: #ffffff; */
+  /* border: none; */
 }
 
-.stats::before {
+/* .stats::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1239,22 +1276,25 @@ section,
   width: 100%;
   height: 100%;
   z-index: -1;
-}
+} */
 
 .stats .stats-item {
   padding: 30px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background: rgb(255, 255, 255);
+  box-shadow: 0 8px 32px 0 rgba(5, 65, 61, 0.37);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
   transition: transform 0.3s ease-in-out;
+  /* margin-left: 20px; */
+  margin-right: 15px;
 }
 
 .stats .stats-item i {
   color: var(--accent-color);
+  /* color: #03fbe2; */
   display: block;
   font-size: 44px;
   float: left;
@@ -1263,6 +1303,8 @@ section,
 
 .stats .stats-item .purecounter {
   color: var(--heading-color);
+  /* color: #f75023; */
+  color: #03858a;
   font-size: 48px;
   line-height: 40px;
   display: block;
@@ -1279,7 +1321,8 @@ section,
 }
 
 strong {
-  color: #004998;
+  /* color: #f75023; */
+  color: #1e6567;
 }
 
 
@@ -1292,6 +1335,10 @@ strong {
   
 }
 
+.skills h2 {
+  color: #03858a;
+}
+
 .skills::before {
   content: "";
   position: absolute;
@@ -1299,7 +1346,8 @@ strong {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(39, 39, 233, 0.3);
+  /* background-color: rgba(39, 39, 233, 0.3); */
+  /* background-image: url('https://mrwallpaper.com/images/high/neon-grey-swirls-ipad-air-4-uf29hp7cle8eext7.webp'); */
   z-index: -1;
 }
 
@@ -1311,7 +1359,8 @@ strong {
 }
 
 .skills .progress .skill {
-  color: var(--heading-color);
+  /* color: var(--heading-color); */
+  color: rgb(3, 112, 116);
   padding: 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
@@ -1337,6 +1386,44 @@ strong {
   
 }
 
+
+
+.timeline-section {
+  padding: 50px 0;
+  background: #f9f9f9;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.timeline-date {
+  flex: 1;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  color: #007bff;
+}
+
+.timeline-content {
+  flex: 2;
+  background: white;
+  padding: 15px;
+  border-left: 3px solid #007bff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+
 /*--------------------------------------------------------------
 # Resume Section with Glass Effect
 --------------------------------------------------------------*/
@@ -1348,7 +1435,8 @@ strong {
   padding: 40px 0 40px 0;
   overflow: hidden;
   background-blend-mode: multiply;
-  background-color: rgba(2, 2, 103, 0.5);
+  /* background-color: rgba(2, 2, 103, 0.5); */
+  background-color: rgba(4, 238, 250, 0.5);
 }
 
 .resume::before {
@@ -1358,10 +1446,11 @@ strong {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(39, 39, 233, 0.3); 
+  /* background-color: rgba(39, 39, 233, 0.3);  */
+  background-color: #00bfff;
   z-index: -1;
   /* z-index: 0; */
-  background: rgba(16, 15, 15, 0.1); 
+  /* background: rgba(16, 15, 15, 0.1);  */
   backdrop-filter: blur(10px);
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1369,18 +1458,18 @@ strong {
 }
 
 .resume h2 {
-  color: #004998;
+  color: #ffffff;
 }
 
 .resume .resume-title {
-  color: #004998;
+  color: aqua;
   font-size: 26px;
   font-weight: 700;
   z-index: 9997;
 }
 
 .resume em {
-  color: #00bfff;
+  color: #00ffff;
 }
 
 .resume .resume-item {
@@ -1406,8 +1495,9 @@ strong {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: color-mix(in srgb, #3217ad , transparent 15%);
-  color: #0b7cf6;
+  color: color-mix(in srgb, #17a8ad , transparent 15%);
+  /* color: #0b7cf6; */
+  color: #03fbe2;
   margin-bottom: 10px;
 }
 
@@ -1420,7 +1510,7 @@ strong {
   color: #f75023;
 }
 .resume .resume-item p {
-  color: #b73434;
+  color: rgb(13, 153, 146);
 }
 
 .resume .resume-item p em {
@@ -1462,6 +1552,9 @@ strong {
   list-style: none;
   text-align: center;
 }
+.portfolio h2 {
+  color: #03858a;
+}
 
 .portfolio .portfolio-filters li {
   cursor: pointer;
@@ -1474,7 +1567,7 @@ strong {
   text-transform: uppercase;
   margin-bottom: 10px;
   transition: all 0.3s ease-in-out;
-  color: #004998;
+  color: #03858a;
 }
 
 .portfolio .portfolio-filters li:hover,
@@ -1579,7 +1672,7 @@ strong {
   padding: 80px 0;
   overflow: hidden;
   background-blend-mode: multiply;
-  background-color: rgba(2, 2, 103, 0.5);
+  background-color: #00ffff;
 }
 
 .services::before {
@@ -1589,7 +1682,7 @@ strong {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(39, 39, 233, 0.3);
+  background-color: turquoise;
   z-index: 0;
   background: rgba(16, 15, 15, 0.1);
   backdrop-filter: blur(10px);
@@ -1607,7 +1700,8 @@ strong {
 }
 
 .services h2 {
-  color: #004998;
+  /* color: #004998; */
+  color: #ffffff;
 }
 
 .services .service-container {
@@ -1669,7 +1763,8 @@ strong {
 }
 
 .services .service-item .title a {
-  color: #007bff;
+  /* color: #007bff; */
+  color: #03fbe2;
   text-decoration: none;
 }
 
@@ -1724,7 +1819,8 @@ strong {
   padding: 80px 0;
   overflow: hidden;
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 255, 0.5);
+  /* background-color: rgba(0, 0, 255, 0.5); */
+  background-color: #00ffff;
 
 }
 
@@ -1735,7 +1831,8 @@ strong {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(39, 39, 233, 0.3);
+  background-color: rgba(1, 54, 58, 0.3);
+  /* background-color: rgb(0, 255, 255); */
   z-index: 0;
   backdrop-filter: blur(10px);
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
@@ -1748,11 +1845,13 @@ strong {
 }
 
 .testimonials h2 {
-  color: #004998;
+  /* color: #004998; */
+  color: #ffffff;
 }
 
 .testy {
-  color: #bcafef;
+  /* color: #bcafef; */
+  color: #00ffff;
   width: 580px;
   margin-left: auto;
   margin-right: auto;
@@ -1794,7 +1893,8 @@ strong {
   font-size: 18px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #007bff;
+  /* color: #007bff; */
+  color: #03fbe2;
 }
 
 .testimonials .testimonial-item h4 {
@@ -1805,7 +1905,7 @@ strong {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(84, 245, 232, 0.836);
   font-size: 26px;
   line-height: 0;
 }
@@ -1830,6 +1930,7 @@ strong {
   color: #ffffff;
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
+  /* background-color: #03fbe26d; */
   backdrop-filter: blur(10px);
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1896,7 +1997,8 @@ strong {
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
-  background-color: rgba(2, 2, 103, 0.5);
+  /* background-color: rgba(2, 2, 103, 0.5); */
+  background-color: #23e9f7;
 }
 
 .contact::before {
@@ -1946,11 +2048,12 @@ strong {
 }
 
 .contact h2 {
-  color: #004998;
+  color: #ffffff;
 }
 
 .contact h3  {
   color: #f75023;
+  /* color: #00ffff; */
 }
 
 .contact p {
@@ -2039,7 +2142,8 @@ strong {
 
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
-  background: rgba(0, 153, 255, 0.7);
+  /* background: rgba(0, 153, 255, 0.7); */
+  background-color: #068477;
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;

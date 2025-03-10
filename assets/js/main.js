@@ -25,6 +25,16 @@ links.forEach((link) => {
   });
 });
 
+
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault(); 
+    window.open(this.href, '_blank');
+  });
+});
+
+
+
   /**
    * Header toggle
    */
@@ -68,6 +78,26 @@ document.addEventListener('click', closeHeaderIfClickedOutside);
     });
 
   });
+
+  async function sendMessage() {
+    const userMessage = document.getElementById('user-input').value;
+    const chatResponse = document.getElementById('chat-response');
+    
+    chatResponse.innerHTML = 'Processing...';
+
+    try {
+      const response = await fetch('/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userMessage }),
+      });
+
+      const data = await response.json();
+      chatResponse.innerHTML = `<strong>AI:</strong> ${data.reply}`;
+    } catch (error) {
+      chatResponse.innerHTML = 'Error fetching AI response. Please try again later.';
+    }
+  }
 
   /**
    * Toggle mobile nav dropdowns
