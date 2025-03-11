@@ -675,7 +675,7 @@ section,
   position: relative;
   z-index: 3;
   max-width: 50%;
-  margin-left: 60px;
+  margin-left: 30px;
 }
 
 .hero h3 {
@@ -906,7 +906,7 @@ section,
   background-image: url('https://mrwallpaper.com/images/high/neon-grey-swirls-ipad-air-4-uf29hp7cle8eext7.webp');
   background-blend-mode: multiply;
   background-color: rgba(3, 63, 65, 0.949);
-  margin: -40px 50px 0px 50px;
+  margin: -40px 20px 0px 20px;
   border-radius: 50px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8px);
@@ -944,7 +944,7 @@ section,
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
-  color: #1e7fe7;
+  /* color: #1e7fe7; */
   color: aqua;
 }
 
@@ -1145,8 +1145,8 @@ section,
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .about1::before {
@@ -1160,12 +1160,10 @@ section,
   background: linear-gradient(to bottom, rgba(182, 57, 23, 0),  rgb(5, 106, 111), rgb(0, 56, 59));
   z-index: 0;
   backdrop-filter: blur(10px);
-  /* box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1); */
-  transition: transform 0.3s ease-in-out;
-  /* border-radius: 50px; */
+  transition: transform 0.3s ease-in-out; 
 }
 
-.about1 section {
+/* .about1 section {
   padding: 70px 0;
   color: #fff;
   background-size: cover;
@@ -1174,11 +1172,9 @@ section,
   background-blend-mode: multiply;
   background-color: rgba(3, 63, 65, 0.949);
   margin: 40px 60px 0px 60px;
-  /* border-radius: 50px; */
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-}
+} */
 
 .container1 {
   max-width: 1200px;
